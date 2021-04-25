@@ -12,7 +12,7 @@ function App() {
   const [ error , setError ] = useState(false);
 
   useEffect(() => {
-    
+    setResult([]);
     const consultarApi = async () => {
       try {
         let buscador = search.toLowerCase()
@@ -46,7 +46,7 @@ function App() {
       <FormPokemon 
         setSearch = {setSearch}
         setLoading = {setLoading}
-        setError = { setError }
+        setError = {setError}
       />
       { error 
         ?
